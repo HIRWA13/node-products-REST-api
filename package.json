@@ -1,0 +1,24 @@
+{
+  "name": "rest-products",
+  "version": "1.0.0",
+  "description": "A RESTful API built with node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "node",
+    "restful",
+    "api"
+  ],
+  "author": "Junior Hirwa",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3",
+    "nodemon": "^3.1.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0"
+  }
+}
