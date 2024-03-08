@@ -1,11 +1,20 @@
 const express = require('express');
 const morgan = require('morgan');
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
 
 const productRoutes = require('./api/routes/productsRoutes')
 const orderRoutes = require('./api/routes/ordersRoutes')
 
 const app = express();
 app.use(morgan('dev'))
+
+// configure dotenv
+dotenv.config()
+
+// connect to mongoDB atlas database
+const dbURI = process.env.DBURI
+mongoose.connect(dbURI)
 
 app.get('/', (req, res) => {
     res.redirect('/products')
